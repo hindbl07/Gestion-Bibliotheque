@@ -1,0 +1,21 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: book-service
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/book_db?useSSL=false&serverTimezone=UTC
+    username: libuser
+    password: libpass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
